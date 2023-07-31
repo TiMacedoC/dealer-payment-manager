@@ -1,2 +1,21 @@
-# dealer-payment-manager
-The Dealer Payment Manager is a web application designed to efficiently manage dealer payments during cash game sessions in a poker room. The app streamlines the payment process, ensuring accurate and timely compensation for dealers based on their services rendered.
+# Dealer Payment Manager 
+
+The **Dealer Payment Manager** is a web application designed to efficiently manage dealer payments during cash game sessions in a poker room. The app streamlines the payment process, ensuring accurate and timely compensation for dealers based on their services rendered.
+
+## Key Features
+
+1. **Dealer Tracking:** The app maintains a record of all dealers participating in each cash game session, storing essential information such as names, contact details, and session timestamps.
+
+2. **Payment Calculation:** Utilizing customizable pay rates and session durations, the app automatically calculates the amount owed to each dealer, factoring in tips, bonuses, and any applicable deductions.
+
+3. **Report Generation:** The app generates comprehensive reports summarizing dealer payments, helping poker room managers monitor costs and plan for future sessions.
+
+4. **Secure Access:** The app ensures the privacy and security of sensitive payment data through robust authentication and authorization protocols.
+
+
+## Upcoming Features
+
+1. **Transaction History:** Detailed transaction logs provide a transparent overview of past payments, enabling administrators to track individual payments and verify financial records.
+
+By streamlining the dealer payment process, the **Dealer Payment Manager** empowers poker rooms to focus on delivering an exceptional gaming experience while efficiently managing dealer compensation.
+
