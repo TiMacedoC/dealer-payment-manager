@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-# Dealer Payment Manager 
-
-The **Dealer Payment Manager** is a web application designed to efficiently manage dealer payments during cash game sessions in a poker room. The app streamlines the payment process, ensuring accurate and timely compensation for dealers based on their services rendered.
-
-## Key Features
-
-1. **Dealer Tracking:** The app maintains a record of all dealers participating in each cash game session, storing essential information such as names, contact details, and session timestamps.
-
-2. **Payment Calculation:** Utilizing customizable pay rates and session durations, the app automatically calculates the amount owed to each dealer, factoring in tips, bonuses, and any applicable deductions.
-
-3. **Report Generation:** The app generates comprehensive reports summarizing dealer payments, helping poker room managers monitor costs and plan for future sessions.
-
-4. **Secure Access:** The app ensures the privacy and security of sensitive payment data through robust authentication and authorization protocols.
-
-
-## Upcoming Features
-
-1. **Transaction History:** Detailed transaction logs provide a transparent overview of past payments, enabling administrators to track individual payments and verify financial records.
-
-By streamlining the dealer payment process, the **Dealer Payment Manager** empowers poker rooms to focus on delivering an exceptional gaming experience while efficiently managing dealer compensation.
-
-=======
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -45,9 +22,25 @@ By streamlining the dealer payment process, the **Dealer Payment Manager** empow
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Dealer Payment Manager
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The **Dealer Payment Manager** is a web application designed to efficiently manage dealer payments during cash game sessions in a poker room. The app streamlines the payment process, ensuring accurate and timely compensation for dealers based on their services rendered.
+
+## Key Features
+
+1. **Dealer Tracking:** The app maintains a record of all dealers participating in each cash game session, storing essential information such as names, contact details, and session timestamps.
+
+2. **Payment Calculation:** Utilizing customizable pay rates and session durations, the app automatically calculates the amount owed to each dealer, factoring in tips, bonuses, and any applicable deductions.
+
+3. **Report Generation:** The app generates comprehensive reports summarizing dealer payments, helping poker room managers monitor costs and plan for future sessions.
+
+4. **Secure Access:** The app ensures the privacy and security of sensitive payment data through robust authentication and authorization protocols.
+
+## Upcoming Features
+
+1. **Transaction History:** Detailed transaction logs provide a transparent overview of past payments, enabling administrators to track individual payments and verify financial records.
+
+By streamlining the dealer payment process, the **Dealer Payment Manager** empowers poker rooms to focus on delivering an exceptional gaming experience while efficiently managing dealer compensation.
 
 ## Installation
 
@@ -68,19 +61,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
@@ -94,4 +74,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
->>>>>>> master

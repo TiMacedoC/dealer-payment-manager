@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Dealer {
+  id     String @id @default(uuid())
+  name   String
+  cpf    String @unique
+  pixKey String @map("pix_key")
+
+  @@map("dealers")
+}
