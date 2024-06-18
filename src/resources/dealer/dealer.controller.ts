@@ -19,8 +19,8 @@ export class DealerController {
   constructor(private readonly dealerService: DealerService) {}
 
   @Post()
-  // create(@Body() createDealerDto: CreateDealerDto) {
-  create(@Body() createDealerDto: Prisma.DealerCreateInput) {
+  create(@Body() createDealerDto: CreateDealerDto) {
+    // create(@Body() createDealerDto: Prisma.DealerCreateInput) {
     console.log('\n❓ ~createDealerDto:', createDealerDto, '❗\n');
     // return this.dealerService.create(createDealerDto);
   }

@@ -5,7 +5,6 @@ type SwaggerOptions = {
   title: string;
   description: string;
   version: string;
-  tag: string;
 };
 
 export const swaggerMiddleware = (
@@ -21,7 +20,6 @@ export const swaggerMiddleware = (
       in: 'header',
       name: 'user-token',
     })
-    .addTag(swaggerOptions.tag)
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
