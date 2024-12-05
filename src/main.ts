@@ -5,10 +5,18 @@ import packageJson from '../package.json';
 import dotenv from 'dotenv';
 
 import { env } from 'process';
+import { RequestMethod } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   dotenv.config();
+
+  app.setGlobalPrefix('manager', {
+    exclude: [
+      { path: 'api-docs', method: RequestMethod.ALL },
+      { path: 'api-json', method: RequestMethod.ALL },
+    ],
+  });
 
   swaggerMiddleware(app, {
     title: 'Dealer Payment Manager',
@@ -22,4 +30,4 @@ async function bootstrap() {
 }
 bootstrap();
 
-//https://youtu.be/0Idug0e9tPw?t=1359
+//https://youtu.be/0Idug0e9tPw?t=1629

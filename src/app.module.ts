@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { SessionModule } from './resources/session/session.module';
-import { DealerModule } from './resources/dealer/dealer.module';
+import { SessionModule } from './modules/session/session.module';
+import { DealerModule } from './modules/dealer/dealer.module';
 
 @Module({
   imports: [SessionModule, DealerModule],

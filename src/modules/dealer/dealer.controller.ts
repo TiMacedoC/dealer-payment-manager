@@ -18,11 +18,10 @@ import { Prisma } from '@prisma/client';
 export class DealerController {
   constructor(private readonly dealerService: DealerService) {}
 
-  @Post()
+  @Post('/register')
   create(@Body() createDealerDto: CreateDealerDto) {
-    // create(@Body() createDealerDto: Prisma.DealerCreateInput) {
     console.log('\n❓ ~createDealerDto:', createDealerDto, '❗\n');
-    // return this.dealerService.create(createDealerDto);
+    return this.dealerService.create(createDealerDto);
   }
 
   @Get()
