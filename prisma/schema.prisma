@@ -8,10 +8,12 @@ datasource db {
 }
 
 model Dealer {
-  id     String @id @default(uuid())
-  name   String
-  cpf    String @unique
-  pixKey String @map("pix_key")
+  id        Int      @id @default(autoincrement())
+  name      String
+  cpf       String
+  nickName  String?  @map("nick_name")
+  birthDate DateTime @map("birth_date")
+  pixKey    String   @map("pix_key")
 
   @@map("dealers")
 }

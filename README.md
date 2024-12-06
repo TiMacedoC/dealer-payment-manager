@@ -43,7 +43,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Tiago Macedo](https://kamilmysliwiec.com)
+- Author - [Tiago Macedo](https://github.com/TiMacedoC)
 - Twitter - [@timacedoc](https://twitter.com/nestframework)
 
 ## License

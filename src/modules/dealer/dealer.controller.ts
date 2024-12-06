@@ -12,16 +12,17 @@ import { CreateDealerDto } from './dto/create-dealer.dto';
 import { UpdateDealerDto } from './dto/update-dealer.dto';
 import { ApiTags } from '@nestjs/swagger';
 import { Prisma } from '@prisma/client';
+import { DealerRegisterDocs } from './docs/dealer-register.docs';
 
 @ApiTags('Dealer')
 @Controller('dealer')
 export class DealerController {
   constructor(private readonly dealerService: DealerService) {}
 
+  @DealerRegisterDocs()
   @Post('/register')
-  create(@Body() createDealerDto: CreateDealerDto) {
-    console.log('\n❓ ~createDealerDto:', createDealerDto, '❗\n');
-    return this.dealerService.create(createDealerDto);
+  register(@Body() body: CreateDealerDto) {
+    return this.dealerService.register(body);
   }
 
   @Get()

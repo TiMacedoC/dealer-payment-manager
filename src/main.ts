@@ -5,10 +5,13 @@ import packageJson from '../package.json';
 import dotenv from 'dotenv';
 
 import { env } from 'process';
-import { RequestMethod } from '@nestjs/common';
+import { RequestMethod, ValidationPipe } from '@nestjs/common';
+import { CustomValidationPipe } from './common/pipes/custom-validation.pipe';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, {
+    logger: ['error', 'warn', 'log'],
+  });
   dotenv.config();
 
   app.setGlobalPrefix('manager', {
@@ -17,6 +20,9 @@ async function bootstrap() {
       { path: 'api-json', method: RequestMethod.ALL },
     ],
   });
+
+  app.enableCors();
+  app.useGlobalPipes(new CustomValidationPipe());
 
   swaggerMiddleware(app, {
     title: 'Dealer Payment Manager',
