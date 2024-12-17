@@ -7,13 +7,78 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Dealer {
-  id        Int      @id @default(autoincrement())
+model Employee {
+  id              Int               @id @default(autoincrement())
+  name            String
+  cpf             String
+  nickName        String?           @map("nick_name")
+  roleId          Int               @map("role_id")
+  role            Role              @relation(fields: [roleId], references: [id])
+  birthDate       DateTime          @map("birth_date")
+  pixKey          String            @map("pix_key")
+  createdAt       DateTime          @default(now()) @map("created_at")
+  updatedAt       DateTime          @updatedAt @map("updated_at")
+  EmployeeSession EmployeeSession[]
+
+  @@map("employees")
+}
+
+model Role {
+  id            Int        @id @default(autoincrement())
+  description   String
+  tipPercentage Float      @map("tip_percentage")
+  Employee      Employee[]
+
+  @@map("roles")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
   name      String
   cpf       String
-  nickName  String?  @map("nick_name")
-  birthDate DateTime @map("birth_date")
-  pixKey    String   @map("pix_key")
+  typeId    Int       @map("type_id")
+  type      UserType  @relation(fields: [typeId], references: [id])
+  email     String?
+  password  String
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  Session   Session[]
 
-  @@map("dealers")
+  @@map("users")
+}
+
+model UserType {
+  id          Int    @id @default(autoincrement())
+  description String
+  User        User[]
+
+  @@map("user_types")
+}
+
+model Session {
+  id              Int               @id @default(autoincrement())
+  sessionStart    DateTime          @map("session_start")
+  sessionEnd      DateTime          @map("session_end")
+  sessionTip      Float             @map("session_tip")
+  userId          Int               @map("user_id")
+  user            User              @relation(fields: [userId], references: [id])
+  createdAt       DateTime          @default(now()) @map("created_at")
+  updatedAt       DateTime          @updatedAt @map("updated_at")
+  EmployeeSession EmployeeSession[]
+
+  @@map("sessions")
+}
+
+model EmployeeSession {
+  id         Int      @id @default(autoincrement())
+  employeeId Int      @map("employee_id")
+  employee   Employee @relation(fields: [employeeId], references: [id])
+  sessionId  Int      @map("session_id")
+  session    Session  @relation(fields: [sessionId], references: [id])
+  startWork  DateTime @map("start_work")
+  endWork    DateTime @map("end_work")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  @@map("employee_sessions")
 }
