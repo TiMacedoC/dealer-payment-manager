@@ -11,7 +11,7 @@ import { SanitizeCpf } from '../../../common/decorators/cpf-sanitize.decorator';
 import { IsCpf } from '../../../common/decorators/is-cpf.decorator';
 import { Type } from 'class-transformer';
 
-export class CreateDealerDto {
+export class CreateEmployeeDto {
   @IsString()
   @IsNotEmpty()
   @ApiProperty({

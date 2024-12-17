@@ -25,7 +25,7 @@ async function bootstrap() {
   app.useGlobalPipes(new CustomValidationPipe());
 
   swaggerMiddleware(app, {
-    title: 'Dealer Payment Manager',
+    title: 'Employee Payment Manager',
     description: packageJson.description,
     version: packageJson.version,
   });
