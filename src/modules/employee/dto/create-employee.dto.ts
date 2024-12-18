@@ -12,11 +12,11 @@ import { IsCpf } from '../../../common/decorators/is-cpf.decorator';
 import { Type } from 'class-transformer';
 
 export class CreateEmployeeDto {
-  @IsString()
-  @IsNotEmpty()
   @ApiProperty({
     example: 'Igor Correa',
   })
+  @IsString()
+  @IsNotEmpty()
   name: string;
 
   @ApiProperty({ example: '06966119024' })
@@ -25,24 +25,30 @@ export class CreateEmployeeDto {
   @SanitizeCpf()
   cpf: string;
 
-  @IsString()
-  @IsOptional()
   @ApiProperty({
     example: 'Piolho',
   })
+  @IsString()
+  @IsOptional()
   nickName?: string;
 
-  @IsDate()
+  @ApiProperty({ example: '1' })
+  @IsNumber()
   @IsNotEmpty()
-  @Type(() => Date)
+  @Type(() => Number)
+  roleId: number;
+
   @ApiProperty({
     example: '1993-09-03',
   })
+  @IsDate()
+  @IsNotEmpty()
+  @Type(() => Date)
   birthDate: Date;
 
-  @IsString()
   @ApiProperty({
     example: '28873400000',
   })
+  @IsString()
   pixKey: string;
 }
