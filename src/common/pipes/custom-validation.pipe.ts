@@ -2,7 +2,7 @@ import {
   HttpStatus,
   ValidationPipe,
   ValidationPipeOptions,
-} from '@nestjs/common'
+} from '@nestjs/common';
 
 export class CustomValidationPipe extends ValidationPipe {
   constructor(options?: ValidationPipeOptions) {
@@ -12,6 +12,6 @@ export class CustomValidationPipe extends ValidationPipe {
       validateCustomDecorators: true,
       errorHttpStatusCode: HttpStatus.BAD_REQUEST,
       ...options,
-    })
+    });
   }
 }

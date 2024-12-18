@@ -5,7 +5,7 @@ import packageJson from '../package.json';
 import dotenv from 'dotenv';
 
 import { env } from 'process';
-import { RequestMethod, ValidationPipe } from '@nestjs/common';
+import { RequestMethod } from '@nestjs/common';
 import { CustomValidationPipe } from './common/pipes/custom-validation.pipe';
 
 async function bootstrap() {
